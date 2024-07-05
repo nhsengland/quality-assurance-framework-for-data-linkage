@@ -1,0 +1,70 @@
+
+site_name: Quality Assurance Framework for Data Linkage
+nav:
+  - Home: index.md  
+  - Framework intro: quality-assurance-framework/introduction.md
+  - Data preparation: preparation.md
+  - Implementation: implementation.md
+  - Evaluation: evaluation.md
+  - Overall considerations: overall-considerations.md
+  - About us: team-intro.md
+  - Glossary: glossary.md  
+
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+    
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - content.code.copy
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: vegalite
+          class: vegalite
+          format: !!python/name:mkdocs_charts_plugin.fences.fence_vegalite
+  - attr_list
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+plugins:
+  - search
+  - markdown-exec
+  - charts:
+      use_data_path: False
+  - enumerate-headings:
+      toc_depth: 2
+      exclude:
+        - index.md
+      restart_increment_after:
+        - "quality-assurance-framework/introduction.md"
+  - git-revision-date-localized:
+      enable_creation_date: true
+extra_css:
+  - assets/stylesheets/extra.css
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/vega@5
+  - https://cdn.jsdelivr.net/npm/vega-lite@5
+  - https://cdn.jsdelivr.net/npm/vega-embed@6
+watch:
+  - overrides

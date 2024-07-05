@@ -1,0 +1,35 @@
+/* Set primary text colour */
+body {
+    color: #212B32; /* NHS dark grey */
+  }
+  
+  /* Set background colour */
+  .md-typeset {
+    background-color: #F0F4F5; /* Grey */
+    
+  }
+  .md-button {
+    color: #FFFFFF; /* Primary text */
+    background-color: #005EB8;
+
+    /* Add hover effect with desired color */
+    &:hover {
+    background-color: #FAE100;
+    color:black;
+  }
+}
+  
+ 
+.md-header {
+    background-color: #003087; 
+  }
+
+.md-tabs {
+    background-color: #425563
+}
+.md-main {
+    background-color: #F0F4F5; 
+}
+
+
+
