@@ -1,0 +1,50 @@
+{% extends "main.html" %} {% block tabs %} {{ super() }}
+<link rel="stylesheet" href="assets/stylesheets/base.css" />
+<link rel="stylesheet" href="assets/stylesheets/home.css" />
+<section class="hero" style="background-color: #003087;">
+
+  <div class="md-grid">
+    <div class="hero-teaser md-typeset">
+      <h1>Quality Assurance for Data Linkage</h1>
+      <p>
+        A framework to help <b>manage</b> and <b>assure</b> the quality of data
+        linkage processes.
+      </p>
+      <a class="md-button md-button--primary"  href="quality-assurance-framework/introduction/" style="background-color: #005EB8; color: #FFFFFF;"> Get started with the framework</a>
+      <a class="md-button" href = "team-intro" style="color: #212B32; background-color: #FAE100;">
+        Learn more about the team
+      </a>
+    </div>
+  </div>
+</section>
+<section class="feature" style="background-color: #F0F4F5;">
+
+  <div class="feature-item md-typeset">
+    <a class="md-button" href="preparation/" >
+      <h1 style="text-align: center;">Data preparation</h1>
+      <p style="text-align: center;">Considers phases profiling, assessment, enrichment and computational resources used</p>
+    </a>
+  </div>
+
+  <div class="feature-item md-typeset" >
+    <a class="md-button" href="implementation/" >
+      <h1 style="text-align: center;">Implementation</h1>
+      <p style="text-align: center;">Considers techniques and tools, configuration of linkage parameters and settings and version control</p>
+    </a>
+  </div>
+  <div class="feature-item md-typeset">
+    <a class="md-button" href="evaluation/">
+      <h1 style="text-align: center;">Evaluation</h1>
+      <p style="text-align: center;">Considers verification, validity, quality of data linkage and speed</p>
+    </a>
+  </div>
+  <div class="feature-item md-typeset">
+    <a class="md-button" href="overall-considerations/" >
+      <h1 style="text-align: center;">Overall Considerations</h1>
+      <p style="text-align: center;"> Considers uncertainty management, documentation, ethics, safety, community engagement and more </p>
+    </a>
+  </div>
+
+</section>
+{% endblock %}
+{% block content %} {% endblock %}
