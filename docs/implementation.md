@@ -115,3 +115,6 @@ Version control guarantees consistent, traceable, and reproducible outcomes for 
 
         &#128994; **GREEN:** <br>
         Robust version control system is in place, effectively tracking changes and managing different versions throughout the data linkage process.
+
+
+If you have any ideas or feedback you'd like to give the team, feel free to [contact us](<https://github.com/nhsengland/quality-assurance-framework-for-data-linkage/issues/new?assignees=&labels=&projects=&template=send-feedback-on-the-quality-assurance-framework-for-data-linkage.md&title=>)
