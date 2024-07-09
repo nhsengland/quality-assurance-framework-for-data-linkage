@@ -204,3 +204,6 @@ Computational resources used refers to the computing infrastructure required to 
             print(get_ram_memory())
             ```
             Understanding how RAM is being used helps understand resource allocation in your machine, and can be used as a proxy to understand the load of different data linkage models
+
+
+If you have any ideas or feedback you'd like to give the team, feel free to [contact us](<https://github.com/nhsengland/quality-assurance-framework-for-data-linkage/issues/new?assignees=&labels=&projects=&template=send-feedback-on-the-quality-assurance-framework-for-data-linkage.md&title=>)

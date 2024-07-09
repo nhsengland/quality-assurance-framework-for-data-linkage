@@ -214,3 +214,6 @@ Continuous Improvement entails the systematic documentation of lessons learnt th
 
         &#128994; **GREEN:** <br>
         A robust process is in place to capture and relay feedback. The insights are used to improve the Data Linkage.
+
+
+If you have any ideas or feedback you'd like to give the team, feel free to [contact us](<https://github.com/nhsengland/quality-assurance-framework-for-data-linkage/issues/new?assignees=&labels=&projects=&template=send-feedback-on-the-quality-assurance-framework-for-data-linkage.md&title=>)
