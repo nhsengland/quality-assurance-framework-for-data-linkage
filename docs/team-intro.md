@@ -5,7 +5,7 @@ hide:
 
 # Data Linkage Hub at NHS England
 
-The Data Linkage Hub's work remit encompasses all things data linkage, from documenting the existing state of linkage in NHS England in the Person_ID handbook, to exploring better matching algorithms using probabilistic models and Splink, to creating a Quality Assurance Framework for Data Linkage.
+The Data Linkage Hub's work remit encompasses all things data linkage, from documenting the existing [state of linkage in NHS England in the Person_ID handbook](https://digital.nhs.uk/services/personal-demographics-service/master-person-service/the-person_id-handbook), to exploring better matching algorithms using probabilistic models and [Splink](https://github.com/moj-analytical-services/splink), to creating a Quality Assurance Framework for Data Linkage.
 
 Data Linkage is a business-critical process within many government organisations, including NHS England. Being able to link patients across their care journey, making sure that under-represented populations are not lost in the cracks, and ensuring compatibility when using several data sets for the same purpose is a pillar of why the Data Linkage Enhancement team exists.
 
@@ -39,4 +39,3 @@ This is the umbrella covering everything else we do. This stream of work encompa
 - Mapping the stakeholders involved in data linkage - both internal and external
 - Feeding user needs into an overall Data Linkage vision
 
-Part of this stream of work was also documenting how the Person_ID is generated via the Master Person Service, to make the current process of linking data in the NHS more transparent and easy to understand.
