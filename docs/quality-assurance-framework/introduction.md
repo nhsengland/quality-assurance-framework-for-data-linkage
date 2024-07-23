@@ -8,6 +8,8 @@ hide:
 # Introduction to the Quality Assurance Framework for Data Linkage (QAFDL)
 ## Purpose of QAFDL
 
+Data linkage is not a by-product of analysis, but a critical modelling step requiring an appropriate level of quality assurance. The objective of understanding and consolidating best practices in data linkage led to the creation of the Quality Assurance Framework.
+
 The **Quality Assurance Framework for Data Linkage** acts as a **guide** designed to provide a structured approach to managing and assuring the quality of data linkage processes in NHS England, but we welcome collaboration from other organisations. 
 
 The QAFDL framework offers support for all stages of data linkage, **from discovery to delivery**. It is advised that the framework is consulted regularly to ensure that the quality assurance principles it contains are included in the project from inception. We view the QAFDL as a 'living' framework which we will iterate over time as it is implemented into our buisness processes.
@@ -25,7 +27,7 @@ The QAFDL is based on three principles, **linkage quality, transparency and safe
 
 | What | Why | Who | When | Where | How |
 |---|---|---|---|---|---|
-| Identifies key areas for assessment in data linkage projects. Provides tools for practitioners to determine quality assurance levels. | Helps all involved understand complexities, recognize data strength, guide informed decisions. | Primarily data linker's job, with recommended review by another person and reference by data users. | Supports all stages, from discovery to delivery. Regular consultation advised. | Essential in any environment where data linkage projects are planned and executed. Accessible to all involved for regular updates and review. | Level of quality assurance varies by project, determined by data linker and users. Triage questions provide a structured approach for decision-making. |
+| Identifies key areas for assessment in data linkage projects. Provides tools for practitioners to determine quality assurance levels. | Helps all involved understand complexities, recognize data strength, guide informed decisions. | Primarily data linker's job, with recommended review by another person and reference by data users. | Supports all stages, from discovery to delivery. Regular consultation advised. | Essential in any environment where data linkage projects are planned and executed. Accessible to all involved for regular updates and review. | Level of quality assurance varies by project, determined by data linker and users. |
 
 ## Overview of the Quality Assurance Framework dimensions
 Over 4 key dimensions, the QAFDL outlines best practices, principles, and strategies to facilitate high-quality data linkage.
