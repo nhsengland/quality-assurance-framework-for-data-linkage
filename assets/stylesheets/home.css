@@ -1,0 +1,111 @@
+/* hero style */
+.hero {
+  flex: 2;
+  position: relative;
+
+  background-color: #003087; /* Primary colour */
+}
+
+.hero-teaser {
+  position: absolute;
+  bottom: 3.2rem;
+
+  margin: 0 0.8rem;
+  background-color: #003087;
+
+  color: #FFFFFF; /* Primary text */
+}
+
+.hero-teaser h1 {
+  margin: 0;
+
+  color: inherit;
+  font-weight: 600;
+}
+
+.hero-teaser .md-button {
+  color: #FFFFFF; /* Primary text */
+  background-color: #005EB8;
+
+  /* Add hover effect with desired color */
+  &:hover {
+    background-color: #FAE100;
+    color:black;
+  }
+}
+
+
+.md-button {
+  color: #FFFFFF; /* Primary text */
+  background-color: #005EB8;
+
+  /* Add hover effect with desired color */
+  &:hover {
+    background-color: #FAE100;
+    color:black;
+  }
+}
+
+
+.hero-teaser .md-header {
+  background-color: #005EB8; /* Primary link */
+  color: #005EB8;
+  border-color: #005EB8; /* Primary link */
+}
+
+/* feature style */
+.feature {
+  flex: auto;
+  position: relative;
+
+  background-color: #F0F4F5; /* Page background */
+
+  display: flex;
+}
+
+.feature-contents {
+  flex-grow: 1;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  flex-grow: 1;
+
+  margin: 0 0.8rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.feature-item .md-button {
+ /* flex-grow: 1;*/
+  
+  flex: 1; /* Make buttons share available space equally */
+  margin: 5px; /* Add spacing between buttons (optional) */
+  width: 60%;
+
+  color: #FFFFFF; /* Primary text */
+  background-color: #005EB8;
+  max-width: 600px;
+
+  /* Add hover effect with desired color */
+  &:hover {
+    background-color: #FAE100;
+    color:black;
+  }
+}
+
+
+
+.feature-item h1 {
+  margin: 0;
+
+  color: inherit;
+  font-weight: 400;
+}
+
+.feature-item p {
+  font-weight: 400;
+}
