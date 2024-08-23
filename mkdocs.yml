@@ -3,6 +3,7 @@ site_name: Quality Assurance Framework for Data Linkage
 nav:
   - Home: index.md  
   - Framework intro: quality-assurance-framework/introduction.md
+  - Triage: triage.md
   - Data preparation: preparation.md
   - Implementation: implementation.md
   - Evaluation: evaluation.md
