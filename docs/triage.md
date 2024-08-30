@@ -17,86 +17,120 @@ It is worth noting that the questions have been formulated for NHS England use c
 
 The first section of questions are multiple choice to establish some of the project’s core tenets, and you'd be expected to choose one of the options listed in the bullet points.
 
- **Engagement start: What stage of your linkage project have you started engagement with the QAFDL?** 
- 
- This affects the order with which elements of the QAFDL should be considered.
-
-- Start of the project
-- Some project work has been completed, but work is ongoing 
-- Linkage has been completed, engaging with QAFDL for audit purposes 
-
-**Linkage project type: What project type does this engagement fall under?** 
-
-Categorising projects in this way can help with transfer of lessons learnt, and signposting the most relevant documentation.
-
-- Type 1: Creating a new data asset 
-- Type 2: Linking pre-existing assets to create a new asset
-- Type 3: Auditing work which has already taken place 
-- Type 4: Assisting NHSE customers who have access to pseudonymised data and have no information on data linkage error rates 
-
-**Types of linkage algorithm: Which type of linkage algorithm are you using?**
-
-If you are not sure, carry out the Preparation phase on the QAF log to discover the best option for your project. Then, come back to this question and select the most appropriate answer. Are you constrained in using a pre-determined linkage algorithm (e.g. MPS)?
-
-The data linker might need to use a specific, previously established methods for linking data, which affects how we check the quality of the linkage.
-
-- Simple join: Deterministic perfect match on NHS number and DOB
-- Established linkage algorithms like MPS
-- Established linkage algorithms + additional rules OR Ad-hoc models
-- Commissioned to third-parties
-
-
-**Purpose: For what purpose are the data sets being linked?**
-
- The purpose influences the quality assurance needed, for example, linked data used for direct patient care requires the highest quality. Depending on whether the linkage is defining a cohort or defining attributes you will want to have differing levels of sensitivity and recall.
-
-- Direct care
-- Non-direct care
-
-
-**Risk: What is the risk associated with data linkage inaccuracies?**
-
-Understanding the risks involved allows us to adjust our data linkage approach to ensure accuracy and reliability for its intended use.
-
-- High risk: Those where incorrect data links can result in severe consequences in healthcare, potentially leading to harm, ethical or legal problems.
-- Moderate risk: Those where incorrect data links may have non-critical consequences.
-- Low-risk: Those where link errors will not significantly impact on patient care or research validity.
-
-**Profile of data content: What is the importance profile of the data ?**
-
-The project's significance is determined by how errors could impact patient safety and may be influenced by other factors like business or politics.
-
-- High profile health data: Support a strand of the NHS long-term plan, high media attention.
-- Normal profile: Anything else
-
-
-**Sensitivity of data: How sensitive is the data we are using?**
-
-We adjust our quality checks based on how sensitive the data is to protect it properly during linkage.
-
-- Sensitive data: Any disclosive information (patient clinical or demographics information)
-- Non-sensitive data: Aggregated data that are non-disclosive of patients information , data publicly available on the internet
-
-
-**Frequency: How often do you plan on linking these data sets?**
-
- The linkage frequency impacts how we approach the efficiency and repeatability of the process.
-
-- One-off
-- Repeated (yearly, monthly)
-- Repeated (weekly, daily)
-- Live
-
-
-**Expertise: How experienced is the person linking the data?**
-
-The skill level of the person linking the data affects quality; our framework guides less experienced staff through the necessary steps. 
-
-- Intermediate+: Have carried out 4 or more data linkage projects of different nature
-- Novice: Have carried out 3 or less data linkage projects (including the completion of the Quality Assurance Framework)
-
-
-
+<table id="tg-CvT1Y" class="tg"><thead>
+  <tr>
+    <th class="tg-v9gt">Dimension </th>
+    <th class="tg-v9gt">Question</th>
+    <th class="tg-v9gt">Options</th>
+    <th class="tg-v9gt">Why is this question important?</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-i49g" rowspan="3">Engagement start</td>
+    <td class="tg-fjxp" rowspan="3">What stage of your linkage project have you started engagement with the QAFDL?</td>
+    <td class="tg-fjxp">Start of the project</td>
+    <td class="tg-fjxp" rowspan="3">This affects the order with which elements of the QAFDL should be considered</td>
+  </tr>
+  <tr>
+    <td class="tg-fjxp">Some project work has been completed, but work is ongoing</td>
+  </tr>
+  <tr>
+    <td class="tg-fjxp">Linkage has been completed, engaging with QAFDL for audit purposes</td>
+  </tr>
+  <tr>
+    <td class="tg-i49g" rowspan="4">Linkage project type</td>
+    <td class="tg-fjxp" rowspan="4">What project type does this engagement fall under?</td>
+    <td class="tg-fjxp">Type 1</td>
+    <td class="tg-fjxp" rowspan="4">Categorising projects in this way can help with transfer of lessons learnt, and signposting the most relevant documentation</td>
+  </tr>
+  <tr>
+    <td class="tg-fjxp">Type 2</td>
+  </tr>
+  <tr>
+    <td class="tg-fjxp">Type 3</td>
+  </tr>
+  <tr>
+    <td class="tg-fjxp">Type 4</td>
+  </tr>
+  <tr>
+    <td class="tg-i49g" rowspan="4">Types of linkage algorithm</td>
+    <td class="tg-fjxp" rowspan="4">Which type of linkage algorithm are you using? If you are not sure, carry out the Preparation phase on the QAF log to discover the best option for your project. Then, come back to this question and select the most appropriate answer. Are you constrained in using a pre-determined linkage algorithm (e.g. MPS)?</td>
+    <td class="tg-fjxp">Simple join</td>
+    <td class="tg-fjxp" rowspan="4">The data linker might need to use a specific, previously established methods for linking data, which affects how we check the quality of the linkage.</td>
+  </tr>
+  <tr>
+    <td class="tg-fjxp">Established linkage algorithms like MPS</td>
+  </tr>
+  <tr>
+    <td class="tg-fjxp">Established linkage algorithms + additional rules OR Ad-hoc models</td>
+  </tr>
+  <tr>
+    <td class="tg-fjxp">Commissioned to third-parties</td>
+  </tr>
+  <tr>
+    <td class="tg-i49g" rowspan="2">Purpose</td>
+    <td class="tg-fjxp" rowspan="2">For what purpose are the data sets being linked?</td>
+    <td class="tg-fjxp">Direct care</td>
+    <td class="tg-fjxp" rowspan="2">The purpose influences the quality assurance needed, for example, linked data used for direct patient care requires the highest quality. Depending on whether the linkage is defining a cohort or defining attributes you will want to have differing levels of sensitivity and recall.</td>
+  </tr>
+  <tr>
+    <td class="tg-fjxp">Non-direct care</td>
+  </tr>
+  <tr>
+    <td class="tg-i49g" rowspan="3">Risk</td>
+    <td class="tg-fjxp" rowspan="3">What is the risk associated with data linkage inaccuracies? (missing a link making the wrong one)</td>
+    <td class="tg-fjxp">High risk </td>
+    <td class="tg-fjxp" rowspan="3">Understanding the risks involved allows us adjust our data linkage approach to ensure accuracy and reliability for its intended use.</td>
+  </tr>
+  <tr>
+    <td class="tg-fjxp">Moderate risk</td>
+  </tr>
+  <tr>
+    <td class="tg-fjxp">Low-risk </td>
+  </tr>
+  <tr>
+    <td class="tg-i49g" rowspan="2">Profile of data content</td>
+    <td class="tg-fjxp" rowspan="2">What is the importance profile of the data ?</td>
+    <td class="tg-fjxp">High profile health data</td>
+    <td class="tg-fjxp" rowspan="2">The project's significance is determined by how errors could impact patient safety and may be influenced by other factors like business or politics.</td>
+  </tr>
+  <tr>
+    <td class="tg-fjxp">Normal profile</td>
+  </tr>
+  <tr>
+    <td class="tg-i49g" rowspan="2">Sensitivity of data </td>
+    <td class="tg-fjxp" rowspan="2">How sensitive is the data we are using?</td>
+    <td class="tg-fjxp">Sensitive data</td>
+    <td class="tg-fjxp" rowspan="2">We adjust our quality checks based on how sensitive the data is to protect it properly during linkage.</td>
+  </tr>
+  <tr>
+    <td class="tg-fjxp">Non-sensitive data</td>
+  </tr>
+  <tr>
+    <td class="tg-i49g" rowspan="4">Frequency</td>
+    <td class="tg-fjxp" rowspan="4">How often do you plan on linking these datasets?</td>
+    <td class="tg-fjxp">One-off</td>
+    <td class="tg-fjxp" rowspan="4">The linkage frequency impacts how we approach the efficiency and repeatability of the process.</td>
+  </tr>
+  <tr>
+    <td class="tg-fjxp">Repeated (yearly, monthly)</td>
+  </tr>
+  <tr>
+    <td class="tg-fjxp">Repeated (weekly, daily)</td>
+  </tr>
+  <tr>
+    <td class="tg-fjxp">Live</td>
+  </tr>
+  <tr>
+    <td class="tg-i49g" rowspan="2">Expertise </td>
+    <td class="tg-fjxp" rowspan="2">How experienced is the person linking the data?</td>
+    <td class="tg-fjxp">Intermediate+</td>
+    <td class="tg-fjxp" rowspan="2">The skill level of the person linking the data affects quality; our framework guides less   experienced staff through the necessary steps.</td>
+  </tr>
+  <tr>
+    <td class="tg-fjxp">Novice</td>
+  </tr>
+</tbody></table>
 
 ## Extended triage questions
 
