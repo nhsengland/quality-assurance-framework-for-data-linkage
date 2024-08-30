@@ -12,6 +12,7 @@ There are two objectives from this work:
 
 It is worth noting that the questions have been formulated for NHS England use cases, and as such may not be applicable for all organisations. 
 
+If you would like to keep track of your triage responses, download our triage log [here](downloadabledocs/triage-log.docx){:download="triage-log"}.
 
 ##  Multiple choice triage questions
 
