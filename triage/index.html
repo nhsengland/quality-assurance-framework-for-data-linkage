@@ -1,0 +1,563 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../quality-assurance-framework/introduction/" rel="prev"/>
+<link href="../preparation/" rel="next"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.1.21" name="generator"/>
+<title>Triage - Quality Assurance Framework for Data Linkage</title>
+<link href="../assets/stylesheets/main.eebd395e.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.ecc896b0.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../assets/_markdown_exec_ansi.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#triage-purpose">2.1 
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Quality Assurance Framework for Data Linkage" class="md-header__button md-logo" data-md-component="logo" href=".." title="Quality Assurance Framework for Data Linkage">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Quality Assurance Framework for Data Linkage
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Triage
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="..">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../quality-assurance-framework/introduction/">
+      Framework intro
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="./">
+      Triage
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../preparation/">
+      Data preparation
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../implementation/">
+      Implementation
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../evaluation/">
+      Evaluation
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../overall-considerations/">
+      Overall considerations
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../team-intro/">
+      About us
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../glossary/">
+      Glossary
+    </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden="">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Quality Assurance Framework for Data Linkage" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Quality Assurance Framework for Data Linkage">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    Quality Assurance Framework for Data Linkage
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../quality-assurance-framework/introduction/">
+        Framework intro
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Triage
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Triage
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#triage-purpose">2.1 
+    Triage purpose
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multiple-choice-triage-questions">2.2 
+    Multiple choice triage questions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extended-triage-questions">2.3 
+    Extended triage questions
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../preparation/">
+        Data preparation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../implementation/">
+        Implementation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../evaluation/">
+        Evaluation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../overall-considerations/">
+        Overall considerations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../team-intro/">
+        About us
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../glossary/">
+        Glossary
+      </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#triage-purpose">2.1 
+    Triage purpose
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multiple-choice-triage-questions">2.2 
+    Multiple choice triage questions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extended-triage-questions">2.3 
+    Extended triage questions
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1><span class="enumerate-headings-plugin enumerate-heading-plugin">2.</span> Triage</h1>
+<h2 id="triage-purpose"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.1</span> Triage purpose</h2>
+<p>This is an exercise which linkers will do alongside the data linkage enhancement team at the start of an engagement with the quality assurance framework for data linkage. 
+There are two objectives from this work:</p>
+<ul>
+<li>Firstly, it will start a conversation to identify potential linkage issues </li>
+<li>Secondly, this log forms an important part of the documentation alongside the framework</li>
+</ul>
+<p>It is worth noting that the questions have been formulated for NHS England use cases, and as such may not be applicable for all organisations. </p>
+<p>If you would like to keep track of your triage responses, download our triage log <a download="triage-log" href="../downloadabledocs/triage-log.docx">here</a>.</p>
+<h2 id="multiple-choice-triage-questions"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.2</span> Multiple choice triage questions</h2>
+<p>The first section of questions are multiple choice to establish some of the project’s core tenets, and you'd be expected to choose one of the options listed in the bullet points.</p>
+<table class="tg" id="tg-CvT1Y"><thead>
+<tr>
+<th class="tg-v9gt">Dimension </th>
+<th class="tg-v9gt">Question</th>
+<th class="tg-v9gt">Options</th>
+<th class="tg-v9gt">Why is this question important?</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="tg-i49g" rowspan="3">Engagement start</td>
+<td class="tg-fjxp" rowspan="3">What stage of your linkage project have you started engagement with the QAFDL?</td>
+<td class="tg-fjxp">Start of the project</td>
+<td class="tg-fjxp" rowspan="3">This affects the order with which elements of the QAFDL should be considered</td>
+</tr>
+<tr>
+<td class="tg-fjxp">Some project work has been completed, but work is ongoing</td>
+</tr>
+<tr>
+<td class="tg-fjxp">Linkage has been completed, engaging with QAFDL for audit purposes</td>
+</tr>
+<tr>
+<td class="tg-i49g" rowspan="4">Linkage project type</td>
+<td class="tg-fjxp" rowspan="4">What project type does this engagement fall under?</td>
+<td class="tg-fjxp">Type 1</td>
+<td class="tg-fjxp" rowspan="4">Categorising projects in this way can help with transfer of lessons learnt, and signposting the most relevant documentation</td>
+</tr>
+<tr>
+<td class="tg-fjxp">Type 2</td>
+</tr>
+<tr>
+<td class="tg-fjxp">Type 3</td>
+</tr>
+<tr>
+<td class="tg-fjxp">Type 4</td>
+</tr>
+<tr>
+<td class="tg-i49g" rowspan="4">Types of linkage algorithm</td>
+<td class="tg-fjxp" rowspan="4">Which type of linkage algorithm are you using? If you are not sure, carry out the Preparation phase on the QAF log to discover the best option for your project. Then, come back to this question and select the most appropriate answer. Are you constrained in using a pre-determined linkage algorithm (e.g. MPS)?</td>
+<td class="tg-fjxp">Simple join</td>
+<td class="tg-fjxp" rowspan="4">The data linker might need to use a specific, previously established methods for linking data, which affects how we check the quality of the linkage.</td>
+</tr>
+<tr>
+<td class="tg-fjxp">Established linkage algorithms like MPS</td>
+</tr>
+<tr>
+<td class="tg-fjxp">Established linkage algorithms + additional rules OR Ad-hoc models</td>
+</tr>
+<tr>
+<td class="tg-fjxp">Commissioned to third-parties</td>
+</tr>
+<tr>
+<td class="tg-i49g" rowspan="2">Purpose</td>
+<td class="tg-fjxp" rowspan="2">For what purpose are the data sets being linked?</td>
+<td class="tg-fjxp">Direct care</td>
+<td class="tg-fjxp" rowspan="2">The purpose influences the quality assurance needed, for example, linked data used for direct patient care requires the highest quality. Depending on whether the linkage is defining a cohort or defining attributes you will want to have differing levels of sensitivity and recall.</td>
+</tr>
+<tr>
+<td class="tg-fjxp">Non-direct care</td>
+</tr>
+<tr>
+<td class="tg-i49g" rowspan="3">Risk</td>
+<td class="tg-fjxp" rowspan="3">What is the risk associated with data linkage inaccuracies? (missing a link making the wrong one)</td>
+<td class="tg-fjxp">High risk </td>
+<td class="tg-fjxp" rowspan="3">Understanding the risks involved allows us adjust our data linkage approach to ensure accuracy and reliability for its intended use.</td>
+</tr>
+<tr>
+<td class="tg-fjxp">Moderate risk</td>
+</tr>
+<tr>
+<td class="tg-fjxp">Low-risk </td>
+</tr>
+<tr>
+<td class="tg-i49g" rowspan="2">Profile of data content</td>
+<td class="tg-fjxp" rowspan="2">What is the importance profile of the data ?</td>
+<td class="tg-fjxp">High profile health data</td>
+<td class="tg-fjxp" rowspan="2">The project's significance is determined by how errors could impact patient safety and may be influenced by other factors like business or politics.</td>
+</tr>
+<tr>
+<td class="tg-fjxp">Normal profile</td>
+</tr>
+<tr>
+<td class="tg-i49g" rowspan="2">Sensitivity of data </td>
+<td class="tg-fjxp" rowspan="2">How sensitive is the data we are using?</td>
+<td class="tg-fjxp">Sensitive data</td>
+<td class="tg-fjxp" rowspan="2">We adjust our quality checks based on how sensitive the data is to protect it properly during linkage.</td>
+</tr>
+<tr>
+<td class="tg-fjxp">Non-sensitive data</td>
+</tr>
+<tr>
+<td class="tg-i49g" rowspan="4">Frequency</td>
+<td class="tg-fjxp" rowspan="4">How often do you plan on linking these datasets?</td>
+<td class="tg-fjxp">One-off</td>
+<td class="tg-fjxp" rowspan="4">The linkage frequency impacts how we approach the efficiency and repeatability of the process.</td>
+</tr>
+<tr>
+<td class="tg-fjxp">Repeated (yearly, monthly)</td>
+</tr>
+<tr>
+<td class="tg-fjxp">Repeated (weekly, daily)</td>
+</tr>
+<tr>
+<td class="tg-fjxp">Live</td>
+</tr>
+<tr>
+<td class="tg-i49g" rowspan="2">Expertise </td>
+<td class="tg-fjxp" rowspan="2">How experienced is the person linking the data?</td>
+<td class="tg-fjxp">Intermediate+</td>
+<td class="tg-fjxp" rowspan="2">The skill level of the person linking the data affects quality; our framework guides less   experienced staff through the necessary steps.</td>
+</tr>
+<tr>
+<td class="tg-fjxp">Novice</td>
+</tr>
+</tbody></table>
+<h2 id="extended-triage-questions"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.3</span> Extended triage questions</h2>
+<p>This second section asks more extended questions to ascertain a more in-depth view of the project’s risk profile.</p>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th><strong>Additional questions</strong></th>
+<th><strong>Why is this question important?</strong></th>
+<th><strong>Related QAFDL aspect</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Entity being linked</strong></td>
+<td>What entity is being linked (person, event, organisation,etc)?</td>
+<td>Knowing what we're linking—people, events, or organisations—guides our choice of linking variables and the reference master dataset used.</td>
+<td>Configuration of linkage parameters/settings</td>
+</tr>
+<tr>
+<td><strong>Common characteristics used</strong></td>
+<td>What common linkage fields do you have available in the two assets for linkage? (NHS numbers, MPS_ID, pseudo (NHS number or MPS_ID), DOB, etc</td>
+<td>To link data successfully, we need to identify fields that are sufficient to identify a match.</td>
+<td>Profiling</td>
+</tr>
+<tr>
+<td><strong>Metadata</strong></td>
+<td>Is metadata and documentation available for all datasets?</td>
+<td>Having common linking fields might not be enough for a successful linkage. Understanding them is important to define how they need to be adjusted or derived.</td>
+<td>Profiling</td>
+</tr>
+<tr>
+<td><strong>Benchmarking</strong></td>
+<td>What level of overlapping are you expecting from the data sets being linked?</td>
+<td>Linked datasets may represent different groups, so knowing how much overlap to expect helps us to predict acceptable linkage rates.</td>
+<td>Verification and validity</td>
+</tr>
+<tr>
+<td><strong>Involvement of reference master data (a "spine")</strong></td>
+<td>Do you need to link data sets to a reference master data set (a "spine") or between them or both?</td>
+<td>Linking to a main reference dataset, or "spine," is best practice. It helps to connect different datasets and track changes over time, like when a patient moves house.</td>
+<td>Techniques and tools</td>
+</tr>
+<tr>
+<td><strong>Synchronicity of data collection</strong></td>
+<td>Do the data sets being linked refer to the same time frame? And are the PIDs being collected at the same time than the analytical measures of interest?</td>
+<td>If datasets span different times, we must adjust for these differences and consider how they might affect the linking process, potentially evaluating how errors in linkage change over time.</td>
+<td>Profiling, assessment</td>
+</tr>
+<tr>
+<td><strong>Source of data</strong></td>
+<td>What categories do the data sets being linked fall into? How was the data collected? Is it clinically validated, or patient inputted? (e.g. Cohort from external researchers, Core assets, DARS assets, Scraped data , Collected by NHSE, Sent by OGD)</td>
+<td>This context can provide lots of clues as to how best to link, what kind of quality we are expecting with respect to outputs, and what kind of quality assurance is needed post linkage. The source of data used in the linkage process can support decisions around other dimensions. For example, core assets are usually linked to reference master data sets via pipelines set up and maintained by the data engineering team.</td>
+<td>Data access</td>
+</tr>
+<tr>
+<td><strong>Data types</strong></td>
+<td>What data types are involved in the linkage (numerical, free text, binary, strings, etc)?</td>
+<td>The nature of the data we link (numbers, text, yes/no answers) affects how we prepare it for linking and which tools we choose. Data types need to be consistent across linkage variables between datasets.</td>
+<td>Profiling</td>
+</tr>
+<tr>
+<td><strong>Data quality</strong></td>
+<td>What is the expected data quality of the data sets being linked? (high, low)</td>
+<td>Data quality drives our choice of linking methods—better quality data allows for simpler linking techniques.</td>
+<td>Assessment</td>
+</tr>
+<tr>
+<td><strong>Number of data sets</strong></td>
+<td>How many data sets will be linked?</td>
+<td>When linking several datasets, we must consider how they'll group together and how to resolve any mismatches, shaping our evaluation process.</td>
+<td>Configuration of linkage parameters/settings</td>
+</tr>
+<tr>
+<td><strong>Environments where the linkage is executed</strong></td>
+<td>Are you constrained in which environment will you be executing the linkage (e.g. DAE, DPS, UDAL, NDSR, RDS, FDP, etc)?</td>
+<td>The setting where we link data can dictate what data fields, tools, and methods we can use, possibly restricting our options of linkage algorithm.</td>
+<td>Computational resources, Safety, Configuration of linkage parameters/settings, Techniques and tools</td>
+</tr>
+<tr>
+<td><strong>Environments where the assets reside</strong></td>
+<td>Where do the assets reside (DAE, UDAL, RDS, etc)?</td>
+<td>Knowing the location of our data helps anticipate and plan for any hurdles, like secure transfers and privacy protection needs.</td>
+<td>Safety</td>
+</tr>
+<tr>
+<td><strong>Customer request</strong></td>
+<td>Is the customer asking for the highest level of quality assurance regardless of the triage outcomes?</td>
+<td>A project might be commissioned by a customer that requires the highest level of quality assurance regardless of the project characteristics.  <br/>The opposite may also occur, however, it is always recommended that the minimum suggested level of quality assurance is delivered to guarantee a professional outcome.</td>
+<td>Knowledge management, Quality of linkage</td>
+</tr>
+<tr>
+<td><strong>Resources</strong></td>
+<td>Which resources (and what type) do you have available to carry out the linkage?</td>
+<td>Our desired quality level might be limited by available resources, and we need to be clear when we can't meet our ideal standards.</td>
+<td>Uncertainty management</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<div class="md-source-file">
+<small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 20, 2024</span>
+<br/>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 20, 2024</span>
+</small>
+</div>
+</article>
+</div>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            Back to top
+          </button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Framework intro" class="md-footer__link md-footer__link--prev" href="../quality-assurance-framework/introduction/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Framework intro
+              </div>
+</div>
+</a>
+<a aria-label="Next: Data preparation" class="md-footer__link md-footer__link--next" href="../preparation/" rel="next">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Data preparation
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
+<script src="../js/mkdocs-charts-plugin.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</body>
+</html>

@@ -1,0 +1,461 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../.." rel="prev"/>
+<link href="../../triage/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.1.21" name="generator"/>
+<title>Framework intro - Quality Assurance Framework for Data Linkage</title>
+<link href="../../assets/stylesheets/main.eebd395e.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.ecc896b0.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../assets/_markdown_exec_ansi.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#introduction-to-the-quality-assurance-framework-for-data-linkage-qafdl">1. 
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Quality Assurance Framework for Data Linkage" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Quality Assurance Framework for Data Linkage">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Quality Assurance Framework for Data Linkage
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Framework intro
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="./">
+      Framework intro
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../triage/">
+      Triage
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../preparation/">
+      Data preparation
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../implementation/">
+      Implementation
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../evaluation/">
+      Evaluation
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../overall-considerations/">
+      Overall considerations
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../team-intro/">
+      About us
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../glossary/">
+      Glossary
+    </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden="">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Quality Assurance Framework for Data Linkage" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Quality Assurance Framework for Data Linkage">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    Quality Assurance Framework for Data Linkage
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Framework intro
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Framework intro
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#purpose-of-qafdl">1.1 
+    Purpose of QAFDL
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-5ws-of-the-qafdl">1.2 
+    The 5W's of the QAFDL
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview-of-the-quality-assurance-framework-dimensions">1.3 
+    Overview of the Quality Assurance Framework dimensions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#definition-of-data-linkage">1.4 
+    Definition of data linkage
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#benefits-of-data-linkage">1.5 
+    Benefits of data linkage
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#useful-links">1.6 
+    Useful links
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../triage/">
+        Triage
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../preparation/">
+        Data preparation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../implementation/">
+        Implementation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../evaluation/">
+        Evaluation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../overall-considerations/">
+        Overall considerations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../team-intro/">
+        About us
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../glossary/">
+        Glossary
+      </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#purpose-of-qafdl">1.1 
+    Purpose of QAFDL
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-5ws-of-the-qafdl">1.2 
+    The 5W's of the QAFDL
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview-of-the-quality-assurance-framework-dimensions">1.3 
+    Overview of the Quality Assurance Framework dimensions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#definition-of-data-linkage">1.4 
+    Definition of data linkage
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#benefits-of-data-linkage">1.5 
+    Benefits of data linkage
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#useful-links">1.6 
+    Useful links
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="introduction-to-the-quality-assurance-framework-for-data-linkage-qafdl"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> Introduction to the Quality Assurance Framework for Data Linkage (QAFDL)</h1>
+<h2 id="purpose-of-qafdl"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> Purpose of QAFDL</h2>
+<p>Data linkage is not a by-product of analysis, but a critical modelling step requiring an appropriate level of quality assurance. The objective of understanding and consolidating best practices in data linkage led to the creation of the Quality Assurance Framework.</p>
+<p>The <strong>Quality Assurance Framework for Data Linkage</strong> acts as a <strong>guide</strong> designed to provide a structured approach to managing and assuring the quality of data linkage processes in NHS England, but we welcome collaboration from other organisations. </p>
+<p>The QAFDL framework offers support for all stages of data linkage, <strong>from discovery to delivery</strong>. It is advised that the framework is consulted regularly to ensure that the quality assurance principles it contains are included in the project from inception. We view the QAFDL as a 'living' framework which we will iterate over time as it is implemented into our buisness processes.</p>
+<p>The broad aims are:</p>
+<ul>
+<li>
+<p>To <strong>equip and empower practitioners</strong> with the means to decide the appropriate levels of quality assurance.</p>
+</li>
+<li>
+<p>Function as a <strong>tracking instrument</strong>, enabling <strong>comprehensive evaluation</strong> of all dimensions described by the framework and facilitating the assessment of data linkage projects.</p>
+</li>
+</ul>
+<p>The QAFDL is based on three principles, <strong>linkage quality, transparency and safety.</strong> It can help boosting users' trust in the validity of the linked data for their analysis or research. It guides linkers and users on managing and interpreting linked data effectively, providing insights into the limitations of their linked data assets, enabling well-informed decisions and robust analyses. Moreover, the QAFDL promotes ethical and responsible use of linked data by suggesting best practices for data privacy and governance.</p>
+<h2 id="the-5ws-of-the-qafdl"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> The 5W's of the QAFDL</h2>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>Why</th>
+<th>Who</th>
+<th>When</th>
+<th>Where</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Identifies key areas for assessment in data linkage projects. Provides tools for practitioners to determine quality assurance levels.</td>
+<td>Helps all involved understand complexities, recognize data strength, guide informed decisions.</td>
+<td>Primarily data linker's job, with recommended review by another person and reference by data users.</td>
+<td>Supports all stages, from discovery to delivery. Regular consultation advised.</td>
+<td>Essential in any environment where data linkage projects are planned and executed. Accessible to all involved for regular updates and review.</td>
+<td>Level of quality assurance varies by project, determined by data linker and users.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="overview-of-the-quality-assurance-framework-dimensions"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3</span> Overview of the Quality Assurance Framework dimensions</h2>
+<p>Over 4 key dimensions, the QAFDL outlines best practices, principles, and strategies to facilitate high-quality data linkage.
+<img alt="overview of qafdl" src="../image.png"/></p>
+<h2 id="definition-of-data-linkage"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4</span> Definition of data linkage</h2>
+<p>Data linkage refers to the process of connecting different datasets to create a more comprehensive view of an entity. An entity can be a patient, events, organisations, etc.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Good reads</p>
+<ul>
+<li>Guidance document: <a href="https://analysisfunction.civilservice.gov.uk/policy-store/data-linking/#why-do-we-need-to-link-data-">Data Linkage for people who work with data in government by the Best Practice and Impact Division OSR</a></li>
+<li>Guidance document - What is data linkage, examples, challenges, methods for linkage, quality assessment and more: <a href="https://www.gov.uk/government/publications/joined-up-data-in-government-the-future-of-data-linking-methods/joined-up-data-in-government-the-future-of-data-linkage-methods">Joined up data in government: The future of data linking methods</a></li>
+</ul>
+</div>
+<p>Data linkage is essential for healthcare research, statistics, and direct care, as it enables seamless integration of information and greatly impacting the quality of healthcare outcomes.</p>
+<h2 id="benefits-of-data-linkage"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5</span> Benefits of data linkage</h2>
+<p>The NHS, as stated on the <a href="https://www.longtermplan.nhs.uk/">Long Term Plan</a>, aims to use data more effectively across health and social care services, for both individual care and for planning and research purposes and this can be done through data linkage. Other benefits are:</p>
+<ul>
+<li>
+<p><strong>Enhanced Insights:</strong> By combining data from different data sources, more in-depth information can be learnt about specific people, groups of people, or occurrences. Linkage also helps policy makers in the development, and evaluation of policies and programmes.</p>
+</li>
+<li>
+<p><strong>Longitudinal Analysis and research opportunities:</strong> Data linkage makes it possible to follow people over time, enabling longitudinal research that can more accurately highlight trends and patterns. Also, opens new possibilities for research that would not be feasible with isolated datasets.</p>
+</li>
+<li>
+<p><strong>Risk Management:</strong> By spotting trends and correlations that might otherwise go unnoticed in isolated datasets, linked data can help organisations foresee and address possible problems.</p>
+</li>
+<li>
+<p><strong>Reduced burden in providers:</strong> Data linkage reduces the need to collect the same information multiple times, thereby reducing the burden on providers. Data linkage can also reduce costs associated with duplicate efforts in data collection.</p>
+</li>
+<li>
+<p><strong>Improved Data Quality:</strong> By facilitating the comparison of data across many sources, linkage enables the identification and correction of discrepancies or errors.</p>
+</li>
+<li>
+<p><strong>Reducing Bias:</strong> When data from different sources is linked, it can help reduce selection bias in research studies, leading to more reliable findings.</p>
+</li>
+<li>
+<p><strong>Service Delivery:</strong> In healthcare and social services, data linkage can improve service delivery by providing a more holistic view of a person's needs and interactions with different services.</p>
+</li>
+</ul>
+<div class="admonition abstract">
+<p class="admonition-title">Good reads</p>
+<ul>
+<li>Full report - Talks about the benefits of linking data sources for public health research, as well as the opportunities and challenges associated with doing so and how to get around them: <a href="https://cms.wellcome.org/sites/default/files/enabling-data-linkage-to-maximise-value-of-public-health-research-data-phrdf-mar15.pdf">Enabling Data Linkage to Maximise the Value of Public Health Research Data</a></li>
+</ul>
+</div>
+<h2 id="useful-links"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6</span> Useful links</h2>
+<p><a href="https://www.gov.uk/government/publications/joined-up-data-in-government-the-future-of-data-linking-methods/joined-up-data-in-government-the-future-of-data-linkage-methods">Joined up data in government: the future of data linking methods</a>. This cross-government review contains contributed articles on state-of-the-art data linking methods and makes recommendations for government data linkage. </p>
+<p>Some more info and links available from here as well <a href="https://analysisfunction.civilservice.gov.uk/policy-store/data-linking/#what-is-data-linking-">Data linkage – Government Analysis Function</a>. </p>
+<p>A nice short read <a href="https://www.ons.gov.uk/methodology/methodologicalpublications/generalmethodology/onsworkingpaperseries/developingstandardtoolsfordatalinkagefebruary2021">Developing standard tools for data linkage: February 2021 - Office for National Statistics</a>. </p>
+<p>A more holistic report by the Office for Statistical Regulations (OSR) is the <a href="https://osr.statisticsauthority.gov.uk/publication/data-sharing-and-linkage-for-the-public-good-follow-up-report/">Data Sharing and Linkage for the Public Good: Follow-Up Report</a>. </p>
+<p><a href="https://learninghub.ons.gov.uk/enrol/index.php?id=1209">Intro to data linkage</a> is a data linkage course offered by the ONS Learning Hub.</p>
+<p>Ministry of Justice has a fantastic set of introductory material to data linkage, and especially probabilistic data linkage, as they are the authors of <a href="https://moj-analytical-services.github.io/splink/">Splink</a>, a Python package for probabilistic data linkage at scale. Particularly interesting the <a href="https://moj-analytical-services.github.io/splink/blog/2024/08/19/bias-in-data-linking.html">Bias in Data Linking</a> blog post. </p>
+<p>Robin Linacre, one of the lead computer scientists behind Splink, authored this blog/introductory course to <a href="https://www.robinlinacre.com/probabilistic_linkage/">Probabilistic Linkage</a>. </p>
+<p>Uni of Southampton also offers <a href="https://store.southampton.ac.uk/short-courses/school-of-economic-social-and-political-sciences/national-centre-for-research-methods/introduction-to-data-linkage">Introduction to Data Linkage</a>. This is a full-immersion 2-day course offered in person or online by Prof. Katie Harron and Dr. James Doidge. </p>
+<p>To find out more about what the team is up to, visit <a href="https://nhsengland.github.io/datascience/">our NHS England data science website.</a></p>
+<hr/>
+<div class="md-source-file">
+<small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 20, 2024</span>
+<br/>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 20, 2024</span>
+</small>
+</div>
+</article>
+</div>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            Back to top
+          </button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Home" class="md-footer__link md-footer__link--prev" href="../.." rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Home
+              </div>
+</div>
+</a>
+<a aria-label="Next: Triage" class="md-footer__link md-footer__link--next" href="../../triage/" rel="next">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Triage
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+<script src="../../js/mkdocs-charts-plugin.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</body>
+</html>

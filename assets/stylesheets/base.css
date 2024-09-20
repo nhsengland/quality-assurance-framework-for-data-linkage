@@ -1,0 +1,34 @@
+/* force blank template */
+.md-main {
+  max-height: 0;
+}
+
+.md-main__inner {
+  margin: unset;
+}
+
+.md-header {
+  background-color: #425563; 
+}
+
+.admonition-info{
+  background-color: #FEFCE5;
+}
+
+
+.md-typset{
+  background-color: #FEFCE5;
+}
+
+.md-button {
+  color: #FFFFFF; /* Primary text */
+  background-color: #005EB8;
+  
+
+  /* Add hover effect with desired color */
+  &:hover {
+    background-color: #FAE100;
+    color:black;
+    border-color: white;
+  }
+}

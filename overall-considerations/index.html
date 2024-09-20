@@ -1,0 +1,624 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../evaluation/" rel="prev"/>
+<link href="../team-intro/" rel="next"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.1.21" name="generator"/>
+<title>Overall considerations - Quality Assurance Framework for Data Linkage</title>
+<link href="../assets/stylesheets/main.eebd395e.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.ecc896b0.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../assets/_markdown_exec_ansi.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#overall-considerations">6. 
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Quality Assurance Framework for Data Linkage" class="md-header__button md-logo" data-md-component="logo" href=".." title="Quality Assurance Framework for Data Linkage">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Quality Assurance Framework for Data Linkage
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Overall considerations
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="..">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../quality-assurance-framework/introduction/">
+      Framework intro
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../triage/">
+      Triage
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../preparation/">
+      Data preparation
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../implementation/">
+      Implementation
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../evaluation/">
+      Evaluation
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="./">
+      Overall considerations
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../team-intro/">
+      About us
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../glossary/">
+      Glossary
+    </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden="">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Quality Assurance Framework for Data Linkage" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Quality Assurance Framework for Data Linkage">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    Quality Assurance Framework for Data Linkage
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../quality-assurance-framework/introduction/">
+        Framework intro
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../triage/">
+        Triage
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../preparation/">
+        Data preparation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../implementation/">
+        Implementation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../evaluation/">
+        Evaluation
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Overall considerations
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Overall considerations
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uncertainty-management">6.1 
+    Uncertainty management
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#communication-of-changes">6.2 
+    Communication of changes
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#safety">6.3 
+    Safety
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ethics-and-fairness">6.4 
+    Ethics and fairness
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#information-governance">6.5 
+    Information governance
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#community-engagement">6.6 
+    Community engagement
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#knowledge-management-documentation-and-transparency">6.7 
+    Knowledge Management (Documentation and transparency)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#continuous-improvement-and-maintenance">6.8 
+    Continuous improvement and maintenance
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../team-intro/">
+        About us
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../glossary/">
+        Glossary
+      </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uncertainty-management">6.1 
+    Uncertainty management
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#communication-of-changes">6.2 
+    Communication of changes
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#safety">6.3 
+    Safety
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ethics-and-fairness">6.4 
+    Ethics and fairness
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#information-governance">6.5 
+    Information governance
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#community-engagement">6.6 
+    Community engagement
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#knowledge-management-documentation-and-transparency">6.7 
+    Knowledge Management (Documentation and transparency)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#continuous-improvement-and-maintenance">6.8 
+    Continuous improvement and maintenance
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="overall-considerations"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.</span> Overall considerations</h1>
+<h2 id="uncertainty-management"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.1</span> Uncertainty management</h2>
+<p>Addressing uncertainty in the Data Linkage process enhances confidence in its outcomes.</p>
+<p>Transparent communication of risks, assumptions, and dependencies is essential, alongside periodic reassessment of these factors.</p>
+<div class="admonition info">
+<p class="admonition-title">Uncertainty management</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Recommendations</label><label for="__tabbed_1_2">RAG</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Three key aspects require consideration:</p>
+<ul>
+<li>
+<p>Risks: Risks pertain to potential events that may adversely affect project objectives, outcomes, or schedules. Managing risks entails identifying, evaluating, prioritising, and mitigating them to safeguard project success.</p>
+</li>
+<li>
+<p>Assumptions: These are accepted beliefs on which the Data Linkage model relies. Managing assumptions involves acknowledging, documenting, and validating these beliefs.</p>
+</li>
+<li>
+<p>Dependencies: Interdependencies among project components may exist. Managing dependencies entails identifying and monitoring these relationships and proactively addressing them during the planning phase.</p>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>🔴 <strong>RED:</strong> <br/>
+Uncertainties are not recognised, managed or communicated.</p>
+<p>🟡 <strong>AMBER:</strong> <br/>
+Some uncertainties are recognised, but the communication and management process could be improved.</p>
+<p>🟢 <strong>GREEN:</strong> <br/>
+Uncertainties are comprehensively recognised, managed and communicated.</p>
+</div>
+</div>
+</input></input></div>
+</div>
+<h2 id="communication-of-changes"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.2</span> Communication of changes</h2>
+<p>Communication of Changes involves clearly and effectively sharing updates or modifications to core data linkage algorithms or methodologies.</p>
+<div class="admonition info">
+<p class="admonition-title">Communication of changes</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Recommendations</label><label for="__tabbed_2_2">RAG</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>
+<p>Establish a roadmap for updates.</p>
+</li>
+<li>
+<p>Inform all stakeholders of planned changes to prevent disruption.</p>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>🔴 <strong>RED:</strong> <br/>
+Absence of a roadmap for changes and ineffective engagement with stakeholders lead to changes being introduced without proper notification.</p>
+<p>🟡 <strong>AMBER:</strong> <br/>
+Partial roadmap for changes and non-timely engagement with stakeholders lead to changes being introduced poor notification.</p>
+<p>🟢 <strong>GREEN:</strong> <br/>
+Presence of a roadmap for changes and effective engagement with stakeholders ensure changes are introduced with proper notification.</p>
+</div>
+</div>
+</input></input></div>
+</div>
+<h2 id="safety"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.3</span> Safety</h2>
+<p>Data Linkage must occur in a safe environments and be a regulated process.</p>
+<div class="admonition info">
+<p class="admonition-title">Safety</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><div class="tabbed-labels"><label for="__tabbed_3_1">Recommendations</label><label for="__tabbed_3_2">RAG</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>
+<p>Regulations: Adhere to data protection regulations like GDPR and the Data Protection Act 2018. Supporting documents like Data Protection Impact Assessments (DPIAs) and Data Sharing Agreements (DSAs) should demonstrate compliance.</p>
+</li>
+<li>
+<p>Data minimisation: Separate personal identifiable information and clinical outcomes and ensure linked records don't reveal sensitive information beyond what's been agreed upon. Consider using Privacy Enhancing Techniques (PETs) to protect individual privacy (for example, encryption)</p>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>🔴 <strong>RED:</strong> <br/>
+Data regulations and data minimisation principles are not followed. Unwanted disclosive information might be released.</p>
+<p>🟡 <strong>AMBER:</strong> <br/>
+Partial adherence to data regulations and data minimisation principles. Some risk of disclosive information been released exists.</p>
+<p>🟢 <strong>GREEN:</strong> <br/>
+Data regulations and data minimisation principles are followed comprehensively.</p>
+</div>
+</div>
+</input></div>
+</div>
+<h2 id="ethics-and-fairness"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.4</span> Ethics and fairness</h2>
+<p>Ethical principles should guide every stage of the Data Linkage process.</p>
+<div class="admonition info">
+<p class="admonition-title">Ethics and fairness</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Recommendations</label><label for="__tabbed_4_2">RAG</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>
+<p>Fairness: Ensuring that the project and its outcomes are non-discriminatory. Identifying issues such as bias or uneven error distribution among different population segments.</p>
+</li>
+<li>
+<p>Accountability: Ensuring that individuals in the Data Linkage workflow are accountable for the decisions made at each stage.</p>
+</li>
+<li>
+<p>Sustainability: Ensuring that the Data Linkage model remains relevant as real-world data evolve over time.</p>
+</li>
+<li>
+<p>Transparency: Offering clear access to processes and decisions.</p>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>🔴 <strong>RED:</strong> <br/>
+No ethical considerations are made. Possible risks of bias or misuse of data are unaddressed.</p>
+<p>🟡 <strong>AMBER:</strong> <br/>
+Some ethical considerations, but without thorough implementation or follow-through. Risks of hidden bias or misuse of data may still exist.</p>
+<p>🟢 <strong>GREEN:</strong> <br/>
+Comprehensive ethical considerations. Risks are understood and disclosed.</p>
+</div>
+</div>
+</div>
+</div>
+<h2 id="information-governance"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.5</span> Information governance</h2>
+<p>Data linkage projects need clear structure and accountability. Defining roles, assigning ownership, and implementing strong oversight lets organisations manage complex Data Linkage projects while ensuring a high standard of information governance.</p>
+<div class="admonition info">
+<p class="admonition-title">Information governance</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Recommendations</label><label for="__tabbed_5_2">RAG</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>
+<p>Roles: Clearly define and document key roles like Information Asset Owner (IAO) and Data Linkage Owner (DLO).</p>
+</li>
+<li>
+<p>Responsibilities: DLO is responsible for ensuring projects align with Quality Assurance Framework principles.</p>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>🔴 <strong>RED:</strong> <br/>
+Lack of clear roles and responsibilities. THe principles set out in the Quality Assurance Framework are not followed.</p>
+<p>🟡 <strong>AMBER:</strong> <br/>
+Roles and responsibilities not clearly defined. Some awareness and adherence to Quality Assurance Framework principles, but gaps or inconsistencies in implementation.</p>
+<p>🟢 <strong>GREEN:</strong> <br/>
+Well-established roles and responsibilities. The Quality Assurance Framework principles are followed and there are regular reviews and updates.</p>
+</div>
+</div>
+</div>
+</div>
+<h2 id="community-engagement"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.6</span> Community engagement</h2>
+<p>Community Engagement in a Data Linkage project involves active collaboration and discussion with other leaders and experts within the field.</p>
+<div class="admonition info">
+<p class="admonition-title">Community engagement</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">Recommendations</label><label for="__tabbed_6_2">RAG</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>
+<p>Collaborate to innovate: Join the Data Linkage conversation for knowledge exchange, technique comparison, and process optimisation. Collective wisdom drives the field forward.</p>
+</li>
+<li>
+<p>Contribute, elevate: Share your tools, code, and experiences to empower the Data Linkage community.</p>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>🔴 <strong>RED:</strong> <br/>
+No engagement with the broader data linkage community.</p>
+<p>🟡 <strong>AMBER:</strong> <br/>
+Occasional engagement with the community but lacks systematic involvement.</p>
+<p>🟢 <strong>GREEN:</strong> <br/>
+Regular engagement with the data linkage community, promoting knowledge exchange and collaboration.</p>
+</div>
+</div>
+</div>
+</div>
+<h2 id="knowledge-management-documentation-and-transparency"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.7</span> Knowledge Management (Documentation and transparency)</h2>
+<p>Documentation and Transparency refer to the practices of recording and sharing the methodologies, processes, and outcomes of the Data Linkage project in a way that can be easily understood by others.</p>
+<div class="admonition info">
+<p class="admonition-title">Knowledge Management (Documentation and transparency)</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">Recommendations</label><label for="__tabbed_7_2">RAG</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>
+<p>Document decision making: refer to Transparency and Accountability in Ethics &amp; Fairness</p>
+</li>
+<li>
+<p>Disseminate knowledge: Make your documentation user-friendly and readily available to all stakeholders. Code goes open-source if possible.</p>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>🔴 <strong>RED:</strong> <br/>
+Lack of transparency and inadequate or inaccessible documentation of the project, making it difficult for others to understand and replicate. Code is not available.</p>
+<p>🟡 <strong>AMBER:</strong> <br/>
+Partially documented and accessible only by few. Code is internally available.</p>
+<p>🟢 <strong>GREEN:</strong> <br/>
+Transparent documentation that can be easily understood and accessed by others. Code is fully published and available on github.</p>
+</div>
+</div>
+</div>
+</div>
+<h2 id="continuous-improvement-and-maintenance"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.8</span> Continuous improvement and maintenance</h2>
+<p>Continuous Improvement entails the systematic documentation of lessons learnt throughout the course of a linkage project, encompassing aspects such as methodology, data, and tools. These insights are then consolidated into a backlog of improvement suggestions, complete with corresponding resource requirements, to be assessed in subsequent project iterations.</p>
+<div class="admonition info">
+<p class="admonition-title">Continuous improvement and maintenance</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"/><input id="__tabbed_8_2" name="__tabbed_8" type="radio"/><div class="tabbed-labels"><label for="__tabbed_8_1">Recommendations</label><label for="__tabbed_8_2">RAG</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>
+<p>Frequency: Determining the frequency of reassessment, particularly for ongoing projects, is crucial to ensure the ongoing relevance of quality assurance procedures, especially in the face of potential alterations in data and requirements.</p>
+</li>
+<li>
+<p>Feedback: Provide feedback to the data providers regarding data quality matters, and capture feedback from the users of the linked data to enhance data linkage process.</p>
+</li>
+<li>
+<p>Backlog: Document lessons learned – methods, data, tools – and turn them into a backlog of actionable improvements with resource estimates.</p>
+</li>
+<li>
+<p>Adapt and evolve: Regularly review your quality assurance plan, especially for ongoing projects, to stay relevant as data and needs change.</p>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>🔴 <strong>RED:</strong> <br/>
+No process is in place to capture and relay feedback. No actionable insights obtained to improve the Data Linkage.</p>
+<p>🟡 <strong>AMBER:</strong> <br/>
+Some feedback is captured but not systematically. Some of the insights are used to improve the Data Linkage.</p>
+<p>🟢 <strong>GREEN:</strong> <br/>
+A robust process is in place to capture and relay feedback. The insights are used to improve the Data Linkage.</p>
+</div>
+</div>
+</div>
+</div>
+<p>If you have any ideas or feedback you'd like to give the team, feel free to <a href="https://github.com/nhsengland/quality-assurance-framework-for-data-linkage/issues/new?assignees=&amp;labels=&amp;projects=&amp;template=send-feedback-on-the-quality-assurance-framework-for-data-linkage.md&amp;title=">contact us</a></p>
+<hr/>
+<div class="md-source-file">
+<small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 20, 2024</span>
+<br/>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 20, 2024</span>
+</small>
+</div>
+</article>
+</div>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            Back to top
+          </button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Evaluation" class="md-footer__link md-footer__link--prev" href="../evaluation/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Evaluation
+              </div>
+</div>
+</a>
+<a aria-label="Next: About us" class="md-footer__link md-footer__link--next" href="../team-intro/" rel="next">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                About us
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
+<script src="../js/mkdocs-charts-plugin.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</body>
+</html>

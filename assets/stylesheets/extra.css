@@ -1,0 +1,90 @@
+/* Set primary text colour */
+body {
+    color: #212B32; /* NHS dark grey */
+  }
+  
+  /* Set background colour */
+  .md-typeset {
+    background-color: #F0F4F5; /* Grey */
+    
+  }
+  .md-button {
+    color: #FFFFFF; /* Primary text */
+    background-color: #005EB8;
+
+    /* Add hover effect with desired color */
+    &:hover {
+    background-color: #FAE100;
+    color:black;
+  }
+}
+  
+ 
+.md-header {
+    background-color: #003087; 
+  }
+
+.md-tabs {
+    background-color: #425563
+}
+.md-main {
+    background-color: #F0F4F5; 
+}
+
+.tg {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+.tg td{
+    border-color:black;
+    border-style:solid;
+    border-width:1px;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    overflow:hidden;
+    padding:10px 5px;
+    word-break:normal;
+}
+
+.tg th{
+    border-color:black;
+    border-style:solid;
+    border-width:1px;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    font-weight:normal;
+    overflow:hidden;
+    padding:10px 5px;
+    word-break:normal;
+}
+
+.tg .tg-fjxp{
+    background-color:#FFF;
+    border-color:inherit;
+    color:#000000;
+    text-align:left;
+    vertical-align:middle
+}
+
+.tg .tg-v9gt{
+    background-color:#222B35;
+    border-color:inherit;
+    color:#ffffff;
+    font-weight:bold;
+    position:-webkit-sticky;
+    position:sticky;
+    text-align:center;
+    top:-1px;
+    vertical-align:middle;
+    will-change:transform
+}
+
+.tg .tg-i49g{
+  background-color:#FFF;
+  border-color:inherit;
+  color:#000000;
+  font-weight:bold;
+  text-align:center;
+  vertical-align:middle
+}

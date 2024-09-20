@@ -1,0 +1,450 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../preparation/" rel="prev"/>
+<link href="../evaluation/" rel="next"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.1.21" name="generator"/>
+<title>Implementation - Quality Assurance Framework for Data Linkage</title>
+<link href="../assets/stylesheets/main.eebd395e.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.ecc896b0.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../assets/_markdown_exec_ansi.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#implementation">4. 
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Quality Assurance Framework for Data Linkage" class="md-header__button md-logo" data-md-component="logo" href=".." title="Quality Assurance Framework for Data Linkage">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Quality Assurance Framework for Data Linkage
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Implementation
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-hidden="true" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="..">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../quality-assurance-framework/introduction/">
+      Framework intro
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../triage/">
+      Triage
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../preparation/">
+      Data preparation
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="./">
+      Implementation
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../evaluation/">
+      Evaluation
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../overall-considerations/">
+      Overall considerations
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../team-intro/">
+      About us
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../glossary/">
+      Glossary
+    </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden="">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Quality Assurance Framework for Data Linkage" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Quality Assurance Framework for Data Linkage">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    Quality Assurance Framework for Data Linkage
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../quality-assurance-framework/introduction/">
+        Framework intro
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../triage/">
+        Triage
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../preparation/">
+        Data preparation
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Implementation
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Implementation
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#techniques-and-tools">4.1 
+    Techniques and Tools
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-of-linkage-parameterssettings">4.2 
+    Configuration of linkage parameters/settings
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#version-control">4.3 
+    Version control
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../evaluation/">
+        Evaluation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../overall-considerations/">
+        Overall considerations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../team-intro/">
+        About us
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../glossary/">
+        Glossary
+      </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#techniques-and-tools">4.1 
+    Techniques and Tools
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-of-linkage-parameterssettings">4.2 
+    Configuration of linkage parameters/settings
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#version-control">4.3 
+    Version control
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="implementation"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.</span> Implementation</h1>
+<h2 id="techniques-and-tools"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.1</span> Techniques and Tools</h2>
+<p>The selection of tools and techniques for Data Linkage must be documented and justified to suit the specific application.</p>
+<div class="admonition info">
+<p class="admonition-title">Type: Process</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Recommendations</label><label for="__tabbed_1_2">RAG</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Some examples of options are</p>
+<ul>
+<li>
+<p>Matching methods: deterministic, probabilistic, hybrid or machine learning-based matching.</p>
+</li>
+<li>
+<p>Tools: publicly available libraries (e.g. Splink), internal off-the shelf services (e.g. MPS), third-party proprietary software (AWS Glue).</p>
+</li>
+</ul>
+<p>The selection of tools and techniques is influenced by various factors. Employ the Triage guidelines to ensure comprehensive consideration of all relevant factors when choosing the appropriate tools and techniques.</p>
+<p>When employing an existing model, justify this decision and clearly specify the version being used. Explain why it aligns with your case and data requirements.</p>
+</div>
+<div class="tabbed-block">
+<p>🔴 <strong>RED:</strong> <br/>
+Inappropriate or inconsistent use of linkage techniques that are not aligned with the nature and quality of the data, resulting in inaccurate or unreliable linkages. There is a reliance on methodologies and tools that are unsuitable or not fit for purpose, leading to suboptimal results.</p>
+<p>🟡 <strong>AMBER:</strong> <br/>
+Some consideration given to the nature and quality of the data when selecting linkage techniques, but there may still be instances where inappropriate methodologies and tools are used, leading to room for improvement in the applicability or efficiency of the linkages.</p>
+<p>🟢 <strong>GREEN:</strong> <br/>
+Careful consideration of the nature and quality of the data to select appropriate linkage techniques. State-of-the-art methodologies and tools are employed, including deterministic matching for exact matches and probabilistic matching for likely matches. There is a focus on the efficient and accurate delivery of results, without relying on unsuitable methodologies or tools.</p>
+</div>
+</div>
+</input></input></div>
+</div>
+<h2 id="configuration-of-linkage-parameterssettings"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.2</span> Configuration of linkage parameters/settings</h2>
+<p>Data Linkage models depend on parameters such as: the choice of blocking variables, matching thresholds, weight assignments for different linkage features, etc.</p>
+<p>The quality assurance of linkage parameters involves different requirements if the data linker sets up a bespoke model (A) or use an established model (B).</p>
+<div class="admonition info">
+<p class="admonition-title">Type: Data</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Recommendations</label><label for="__tabbed_2_2">RAG</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Option (A) - Bespoke model</p>
+<ul>
+<li>
+<p>Fine-tune parameters: Adjust settings like matching thresholds and weights based on your data quality and business case.</p>
+</li>
+<li>
+<p>Data-driven decisions: Test different configurations to optimise accuracy and reliability, and document final choices for transparency.</p>
+</li>
+<li>
+<p>Version control: Share and store parameter settings for future reference.</p>
+</li>
+</ul>
+<p>Option (B) - Established model</p>
+<ul>
+<li>
+<p>Understand your parameters: Evaluate what is built-in to the model and their impact on results.</p>
+</li>
+<li>
+<p>Documentation: Rely on existing model documentation to assess settings.</p>
+</li>
+<li>
+<p>Investigate data interaction: Test and document how the model's parameters interact with your specific data.</p>
+</li>
+</ul>
+<p>Employ the Triage guidelines to ensure comprehensive consideration of all relevant factors when choosing the appropriate parameters and settings.</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Option (A) - Bespoke model</strong></p>
+<p>🔴 <strong>RED:</strong> <br/>
+Linkage parameters are inadequately configured leading to inaccurate or unreliable linkages. No consideration for data quality or business needs.</p>
+<p>🟡 <strong>AMBER:</strong> <br/>
+Some parameter consideration, but inconsistent. Iteration lacks systematic approach.</p>
+<p>🟢 <strong>GREEN:</strong> <br/>
+Linkage parameters are carefully configured based on data quality and specific business needs. Adjustment is made when necessary to enhance accuracy and reliability. Iterative refinement is systematic, informed by evaluation and quality assessment.</p>
+<p><strong>Option (B) - Established model</strong></p>
+<p>🔴 <strong>RED:</strong> <br/>
+Data linker is unaware of the parameters involved in the established model, and has not carried out an impact assessment on the data in hand.</p>
+<p>🟡 <strong>AMBER:</strong> <br/>
+Data linker is aware of the parameters involved in the established model, but has not carried out an impact assessment on the data in hand.</p>
+<p>🟢 <strong>GREEN:</strong> <br/>
+Data linker is aware of the parameters involved in the established model, and has carried out an impact assessment on the data in hand.</p>
+</div>
+</div>
+</input></input></div>
+</div>
+<h2 id="version-control"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.3</span> Version control</h2>
+<p>Version control guarantees consistent, traceable, and reproducible outcomes for the data linkage process.</p>
+<div class="admonition info">
+<p class="admonition-title">Type: Process</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><div class="tabbed-labels"><label for="__tabbed_3_1">Recommendations</label><label for="__tabbed_3_2">RAG</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Code: Track changes to the main linkage process code for easy debugging and updates.</li>
+<li>Libraries: Monitor any external code used.</li>
+<li>Model Parameters: Record adjustments to settings for transparency and optimisation.</li>
+<li>Analyses: Preserve profiling and test outcomes for future comparison, enhancement, and methodology validation.</li>
+<li>Assessment Card:  Monitor the evolution of your linkage methodology and its performance.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>🔴 <strong>RED:</strong> <br/>
+Absence of a version control process in the data linkage procedure.</p>
+<p>🟡 <strong>AMBER:</strong> <br/>
+Basic version control process is in place but lacks comprehensive tracking and management features.</p>
+<p>🟢 <strong>GREEN:</strong> <br/>
+Robust version control system is in place, effectively tracking changes and managing different versions throughout the data linkage process.</p>
+</div>
+</div>
+</input></div>
+</div>
+<p>If you have any ideas or feedback you'd like to give the team, feel free to <a href="https://github.com/nhsengland/quality-assurance-framework-for-data-linkage/issues/new?assignees=&amp;labels=&amp;projects=&amp;template=send-feedback-on-the-quality-assurance-framework-for-data-linkage.md&amp;title=">contact us</a></p>
+<hr/>
+<div class="md-source-file">
+<small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 20, 2024</span>
+<br/>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 20, 2024</span>
+</small>
+</div>
+</article>
+</div>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            Back to top
+          </button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Data preparation" class="md-footer__link md-footer__link--prev" href="../preparation/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Data preparation
+              </div>
+</div>
+</a>
+<a aria-label="Next: Evaluation" class="md-footer__link md-footer__link--next" href="../evaluation/" rel="next">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Evaluation
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
+<script src="../js/mkdocs-charts-plugin.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</body>
+</html>
