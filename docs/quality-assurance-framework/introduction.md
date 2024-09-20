@@ -60,4 +60,25 @@ The NHS, as stated on the [Long Term Plan](https://www.longtermplan.nhs.uk/), ai
 !!! abstract "Good reads"
     - Full report - Talks about the benefits of linking data sources for public health research, as well as the opportunities and challenges associated with doing so and how to get around them: [Enabling Data Linkage to Maximise the Value of Public Health Research Data](https://cms.wellcome.org/sites/default/files/enabling-data-linkage-to-maximise-value-of-public-health-research-data-phrdf-mar15.pdf)
 
+
+## Useful links
+
+[Joined up data in government: the future of data linking methods](https://www.gov.uk/government/publications/joined-up-data-in-government-the-future-of-data-linking-methods/joined-up-data-in-government-the-future-of-data-linkage-methods). This cross-government review contains contributed articles on state-of-the-art data linking methods and makes recommendations for government data linkage. 
+
+Some more info and links available from here as well [Data linkage – Government Analysis Function](https://analysisfunction.civilservice.gov.uk/policy-store/data-linking/#what-is-data-linking-). 
+
+A nice short read [Developing standard tools for data linkage: February 2021 - Office for National Statistics](https://www.ons.gov.uk/methodology/methodologicalpublications/generalmethodology/onsworkingpaperseries/developingstandardtoolsfordatalinkagefebruary2021). 
+
+A more holistic report by the Office for Statistical Regulations (OSR) is the [Data Sharing and Linkage for the Public Good: Follow-Up Report](https://osr.statisticsauthority.gov.uk/publication/data-sharing-and-linkage-for-the-public-good-follow-up-report/). 
+
+[Intro to data linkage](https://learninghub.ons.gov.uk/enrol/index.php?id=1209) is a data linkage course offered by the ONS Learning Hub.
+
+Ministry of Justice has a fantastic set of introductory material to data linkage, and especially probabilistic data linkage, as they are the authors of [Splink](https://moj-analytical-services.github.io/splink/), a Python package for probabilistic data linkage at scale. Particularly interesting the [Bias in Data Linking](https://moj-analytical-services.github.io/splink/blog/2024/08/19/bias-in-data-linking.html) blog post. 
+
+Robin Linacre, one of the lead computer scientists behind Splink, authored this blog/introductory course to [Probabilistic Linkage](https://www.robinlinacre.com/probabilistic_linkage/). 
+
+Uni of Southampton also offers [Introduction to Data Linkage](https://store.southampton.ac.uk/short-courses/school-of-economic-social-and-political-sciences/national-centre-for-research-methods/introduction-to-data-linkage). This is a full-immersion 2-day course offered in person or online by Prof. Katie Harron and Dr. James Doidge. 
+
+
+
 To find out more about what the team is up to, visit [our NHS England data science website.](https://nhsengland.github.io/datascience/)
