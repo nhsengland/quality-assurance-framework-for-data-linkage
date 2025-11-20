@@ -3,6 +3,7 @@ site_name: Quality Assurance Framework for Data Linkage
 nav:
   - Home: index.md  
   - Framework intro: quality-assurance-framework/introduction.md
+  - Engagement with the Data Linkage Hub: engagement.md
   - Triage: triage.md
   - Data preparation: preparation.md
   - Implementation: implementation.md
@@ -36,6 +37,9 @@ markdown_extensions:
         - name: vegalite
           class: vegalite
           format: !!python/name:mkdocs_charts_plugin.fences.fence_vegalite
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - attr_list
   - pymdownx.tabbed:
       alternate_style: true
@@ -51,6 +55,7 @@ markdown_extensions:
 plugins:
   - search
   - markdown-exec
+  - glightbox
   - charts:
       use_data_path: False
   - enumerate-headings:
@@ -68,4 +73,5 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/vega-lite@5
   - https://cdn.jsdelivr.net/npm/vega-embed@6
 watch:
+  - docs
   - overrides
