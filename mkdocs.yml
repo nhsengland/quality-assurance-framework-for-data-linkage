@@ -29,6 +29,8 @@ theme:
     - navigation.footer
     - search.highlight
     - content.code.copy
+    - content.footnote.tooltips
+
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -52,6 +54,7 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - footnotes
 plugins:
   - search
   - markdown-exec
